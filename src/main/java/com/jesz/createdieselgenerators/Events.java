@@ -96,7 +96,7 @@ public class Events {
 
                             FluidStack fluid = TransferUtil.getFirstFluid(tank);
 
-                            if(FuelTypeManager.getGeneratedSpeed(fluid.getFluid()) == 0)
+                            if(fluid == null || FuelTypeManager.getGeneratedSpeed(fluid.getFluid()) == 0)
                                 continue;
                             level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
                             try {
