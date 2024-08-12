@@ -152,7 +152,7 @@ public class HugeDieselEngineBlockEntity extends SmartBlockEntity implements IHa
         movementDirection.withCallback($ -> onDirectionChanged());
 
         behaviours.add(movementDirection);
-        tank = SmartFluidTankBehaviour.single(this, 100);
+        tank = SmartFluidTankBehaviour.single(this, 8100);
         behaviours.add(tank);
     }
 

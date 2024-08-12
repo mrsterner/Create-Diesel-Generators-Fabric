@@ -99,7 +99,7 @@ public class LargeDieselGeneratorBlockEntity extends GeneratingKineticBlockEntit
         movementDirection.withCallback($ -> onDirectionChanged(true));
 
         behaviours.add(movementDirection);
-        tank = SmartFluidTankBehaviour.single(this, 1000);
+        tank = SmartFluidTankBehaviour.single(this, 81000);
         behaviours.add(tank);
         super.addBehaviours(behaviours);
     }

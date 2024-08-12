@@ -296,7 +296,7 @@ public class OilBarrelBlockEntity extends SmartBlockEntity implements IMultiBloc
     }
 
     public static int getCapacityMultiplier() {
-        return AllConfigs.server().fluids.fluidTankCapacity.get() * 1000;
+        return AllConfigs.server().fluids.fluidTankCapacity.get() * 81000;
     }
 
     @Override
