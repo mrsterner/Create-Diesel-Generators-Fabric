@@ -148,11 +148,11 @@ public class FuelTypeManager {
         tryPopulateTags();
         if(fuelTypes.containsKey(fluid))
             if(engine == DieselGeneratorBlock.EngineTypes.NORMAL)
-                return fuelTypes.get(fluid).getBurnNormal();
+                return fuelTypes.get(fluid).getBurnNormal() * 81;
             else if(engine == DieselGeneratorBlock.EngineTypes.MODULAR)
-                return fuelTypes.get(fluid).getBurnModular();
+                return fuelTypes.get(fluid).getBurnModular() * 81;
             else if(engine == DieselGeneratorBlock.EngineTypes.HUGE)
-                return fuelTypes.get(fluid).getBurnHuge();
+                return fuelTypes.get(fluid).getBurnHuge() * 81;
         return 0;
     }
     public static float getGeneratedSpeed(Fluid fluid){
@@ -170,13 +170,13 @@ public class FuelTypeManager {
     public static int getBurnRate(BlockEntity be, Fluid fluid){
         tryPopulateTags();
         if(fuelTypes.containsKey(fluid))
-            return fuelTypes.get(fluid).getBurn(be);
+            return fuelTypes.get(fluid).getBurn(be) * 81;
         return 0;
     }
     public static int getBurnRate(Fluid fluid){
         tryPopulateTags();
         if(fuelTypes.containsKey(fluid))
-            return fuelTypes.get(fluid).getBurnNormal();
+            return fuelTypes.get(fluid).getBurnNormal() * 81;
         return 0;
     }
     public static int getSoundSpeed(Fluid fluid){
