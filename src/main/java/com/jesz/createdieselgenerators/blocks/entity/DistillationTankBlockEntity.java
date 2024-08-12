@@ -583,7 +583,7 @@ public class DistillationTankBlockEntity extends SmartBlockEntity implements IMu
     }
 
     public static long getCapacityMultiplier() {
-        return 8 * FluidConstants.BUCKET;
+        return FluidConstants.BUCKET / 2;
     }
 
     public LerpedFloat getFluidLevel() {
